@@ -18,7 +18,7 @@
                         <div class="flex-shrink-0">
                             <a href="#" class="flex items-center">
                                 <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
-                                <span class="ml-2 text-white font-semibold hidden md:block">MovieStream</span>
+                                <span class="ml-2 text-white font-semibold hidden md:block">SabyMer</span>
                             </a>
                         </div>
                     </div>
@@ -130,17 +130,16 @@
     </div>
   </div>
   </header>
-  
-  <!-- Hero Section with Background Image -->
-  
 
-  <!-- WeFilm title and description at bottom - with more spacing -->
+  <!-- welcome  -->
+ <section>
+   <!-- WeFilm title and description at bottom - with more spacing -->
   <div class="relative pt-6 sm:pt-10 md:pt-16 pb-8 px-4 md:px-8 mt-4 sm:mt-6 md:mt-8">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8">WeFilm - Best Place For Movie</h2>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8">SabyMer - Best Place For Movie</h2>
       
       <p class="text-xs sm:text-sm md:text-base mb-4 sm:mb-5 md:mb-6 max-w-4xl mx-auto">
-        Welcome to <span class="font-semibold">WeFilm</span> movie site, the ultimate destination for all film enthusiasts. Immerse yourself in a world of captivating stories, stunning visuals, and unforgettable performances. Explore our extensive library of movies, spanning across genres, eras, and cultures.
+        Welcome to <span class="font-semibold">SabyMer</span> movie site, the ultimate destination for all film enthusiasts. Immerse yourself in a world of captivating stories, stunning visuals, and unforgettable performances. Explore our extensive library of movies, spanning across genres, eras, and cultures.
       </p>
       
       <p class="text-xs sm:text-sm md:text-base max-w-4xl mx-auto">
@@ -148,8 +147,11 @@
       </p>
     </div>
   </div>
-  <section>
+ </section>
+
+
  <!-- WeFilm Features Section -->
+  <section>
 <div class="bg-gray-900 text-white py-12 md:py-20 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
     <!-- Section Header -->
@@ -231,9 +233,10 @@
     </div>
   </div>
 </div>
-
-
   </section>
+
+
+  <!-- Our sponsor -->
   <section class="bg-gray-100">
      <div class="bg-[#050a1c] text-white py-16">
         <div class="container mx-auto px-4 max-w-6xl">
@@ -302,62 +305,145 @@
         </div>
     </div>
   </section>
+
+
   <!-- Our Team Section -->
 <section class="py-16 bg-gray-900">
   <div class="container mx-auto px-4">
     <!-- Section Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-12">
       <h2 class="text-3xl font-bold mb-2 text-blue-400">Our Team</h2>
       <p class="text-2xl font-bold text-white max-w-3xl mx-auto">
         Crafting cinematic dreams with passion and precision, creating unforgettable moments that inspire and captivate audiences.
       </p>
     </div>
     
-    <!-- Team Grid - Only 3 cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+    <!-- Team Grid - Only 3 cards with closer spacing -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-4xl mx-auto">
       
       <!-- Team Member 1 -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-60 mx-auto">
-        <div class="relative overflow-hidden" style="height: 320px; width: 220px; margin: 0 auto;">
-          <img class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-110" src="./image/Kuksneg.jpg" alt="Team Leader">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-            <span class="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mb-2 transform transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Founder</span>
-            <p class="text-gray-300 text-xs">With over 15 years of experience, Adam brings a unique vision to every production.</p>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full mx-auto">
+        <div class="relative overflow-hidden group h-[350px]">
+          <!-- Yellow Glow Effect on hover -->
+          <div class="absolute -inset-1 bg-yellow-300/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+          
+          <!-- Role Badge at top left -->
+          <div class="absolute top-0 left-0 bg-[#050a1c] text-white px-3 py-1 z-10 rounded-br-lg font-medium shadow-lg transition-all duration-300 hover:bg-blue-600">
+            Founder
           </div>
-        </div>
-        <div class="p-3 text-center">
-          <h3 class="font-bold text-lg text-white mb-1">Phou Kukseng</h3>
-          <p class="text-blue-400 font-medium text-sm">Our Founder</p>
+          
+          <img class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 relative z-0" src="./image/Kuksneg.jpg" alt="Team Leader">
+          
+          <!-- Overlay with info on hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 z-10">
+            <h3 class="font-bold text-xl text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Phou Kukseng</h3>
+            <p class="text-blue-400 font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Our Founder</p>
+            <p class="text-gray-300 text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">With over 15 years of experience, Kukseng brings a unique vision to every production.</p>
+            
+            <!-- Social Media Icons in the overlay with animation and tooltips -->
+            <div class="flex space-x-3 mt-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-200">
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-600">
+                <i class="fab fa-facebook-f text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Facebook</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-pink-600">
+                <i class="fab fa-instagram text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-pink-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Instagram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-500">
+                <i class="fab fa-telegram-plane text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-600 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Telegram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-black">
+                <i class="fab fa-x-twitter text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs py-1 px-2 rounded-md -top-8 w-12">X</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       
       <!-- Team Member 2 -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-60 mx-auto">
-        <div class="relative overflow-hidden" style="height: 320px; width: 220px; margin: 0 auto;">
-          <img class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-110" src="./image/Rotha.jpg" alt="Team Member">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-            <span class="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mb-2 transform transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Developer</span>
-            <p class="text-gray-300 text-xs">Crafting visual stories through light and shadow, recognized at international film festivals.</p>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full mx-auto">
+        <div class="relative overflow-hidden group h-[350px]">
+          <!-- Yellow Glow Effect on hover -->
+          <div class="absolute -inset-1 bg-yellow-300/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+          
+          <!-- Role Badge at top left -->
+          <div class="absolute top-0 left-0 bg-[#050a1c] text-white px-3 py-1 z-10 rounded-br-lg font-medium shadow-lg transition-all duration-300 hover:bg-pink-600">
+            Developer
           </div>
-        </div>
-        <div class="p-3 text-center">
-          <h3 class="font-bold text-lg text-white mb-1">Nom Rotha</h3>
-          <p class="text-blue-400 font-medium text-sm">Our Developer</p>
+          
+          <img class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 relative z-0" src="./image/Rotha.jpg" alt="Team Member">
+          
+          <!-- Overlay with info on hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 z-10">
+            <h3 class="font-bold text-xl text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Nom Rotha</h3>
+            <p class="text-blue-400 font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Our Developer</p>
+            <p class="text-gray-300 text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">Crafting visual stories through light and shadow, recognized at international film festivals.</p>
+            
+            <!-- Social Media Icons in the overlay with animation and tooltips -->
+            <div class="flex space-x-3 mt-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-200">
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-600">
+                <i class="fab fa-facebook-f text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Facebook</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-pink-600">
+                <i class="fab fa-instagram text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-pink-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Instagram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-500">
+                <i class="fab fa-telegram-plane text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-600 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Telegram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-black">
+                <i class="fab fa-x-twitter text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs py-1 px-2 rounded-md -top-8 w-12">X</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       
       <!-- Team Member 3 -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-60 mx-auto">
-        <div class="relative overflow-hidden" style="height: 320px; width: 220px; margin: 0 auto;">
-          <img class="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-110" src="./image/Ratha.jpg" alt="Team Member">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-            <span class="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mb-2 transform transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Editor</span>
-            <p class="text-gray-300 text-xs">With a keen eye for pacing and rhythm, Michael transforms raw footage into captivating narratives.</p>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full mx-auto">
+        <div class="relative overflow-hidden group h-[350px]">
+          <!-- Yellow Glow Effect on hover -->
+          <div class="absolute -inset-1 bg-yellow-300/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+          
+          <!-- Role Badge at top left -->
+          <div class="absolute top-0 left-0 bg-[#050a1c] text-white px-3 py-1 z-10 rounded-br-lg font-medium shadow-lg transition-all duration-300 hover:bg-yellow-600">
+            Editor
           </div>
-        </div>
-        <div class="p-3 text-center">
-          <h3 class="font-bold text-lg text-white mb-1">Hor Ratha</h3>
-          <p class="text-blue-400 font-medium text-sm">Lead Editor</p>
+          
+          <img class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 relative z-0" src="./image/Ratha.jpg" alt="Team Member">
+          
+          <!-- Overlay with info on hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 z-10">
+            <h3 class="font-bold text-xl text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Hor Ratha</h3>
+            <p class="text-blue-400 font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Lead Editor</p>
+            <p class="text-gray-300 text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">With a keen eye for pacing and rhythm, Ratha transforms raw footage into captivating narratives.</p>
+            
+            <!-- Social Media Icons in the overlay with animation and tooltips -->
+            <div class="flex space-x-3 mt-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-200">
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-600">
+                <i class="fab fa-facebook-f text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Facebook</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-pink-600">
+                <i class="fab fa-instagram text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-pink-700 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Instagram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-blue-500">
+                <i class="fab fa-telegram-plane text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-600 text-white text-xs py-1 px-2 rounded-md -top-8 w-20">Telegram</span>
+              </a>
+              <a href="#" class="group relative w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:bg-black">
+                <i class="fab fa-x-twitter text-white text-sm transition-all duration-500 group-hover:rotate-[360deg]"></i>
+                <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs py-1 px-2 rounded-md -top-8 w-12">X</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -441,6 +527,60 @@
     }
   </script>
 </section>
+
+<!-- Footer  -->
+<footer class="bg-gradient-to-r from-blue-900 to-bg-[#050a1c] text-white py-8">
+  <div class="container mx-auto px-4">
+    <!-- Logo and Navigation -->
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+      <!-- Logo with spin animation on hover -->
+      <div class="mb-6 md:mb-0">
+        <a href="#" class="flex items-center group">
+          <div class="transform transition-transform duration-500 group-hover:rotate-[360deg]">
+            <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
+          </div>
+          <span class="ml-2 text-xl font-bold text-blue-400">SabyMer</span>
+        </a>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex space-x-8">
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Home</a>
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">About</a>
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Service</a>
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Contact Us</a>
+      </nav>
+    </div>
+    
+    <!-- Social Media Icons with hover effects -->
+    <div class="flex justify-center space-x-6 my-8">
+      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-800 transition-all duration-300">
+        <i class="fab fa-facebook-f text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
+      </a>
+      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-pink-600 transition-all duration-300">
+        <i class="fab fa-instagram text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
+      </a>
+      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-700 transition-all duration-300">
+        <i class="fab fa-linkedin-in text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
+      </a>
+      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-red-600 transition-all duration-300">
+        <i class="fab fa-youtube text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
+      </a>
+      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-500 transition-all duration-300">
+        <i class="fab fa-telegram-plane text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
+      </a>
+    </div>
+    
+    <!-- Divider -->
+    <div class="border-t border-gray-700 my-6"></div>
+    
+    <!-- Copyright -->
+    <div class="text-center text-gray-400 text-sm">
+      <p>Copyright © 2025 SabyMer. All rights reserved.</p>
+      <p class="mt-2">The home for movie lovers</p>
+    </div>
+  </div>
+</footer>
 <script>
         // Toggle mobile menu
         document.getElementById('mobile-menu-button').addEventListener('click', function(event) {
