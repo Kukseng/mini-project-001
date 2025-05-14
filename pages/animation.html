@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Website Navbar</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body class="bg-[#030A1B]">
+        <div class="relative min-h-screen bg-cover bg-center"
+            style="background-image: url('../asset/image (36).png')">
+            <nav
+                class="fixed w-full z-50 flex justify-center px-2 sm:px-6 lg:px-8 pt-4">
+                <div
+                    class="w-full max-w-6xl bg-cyan-900/40 backdrop-blur-md rounded-full border border-cyan-800/50">
+                    <div
+                        class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <a href="#" class="flex items-center">
+                                    <i
+                                        class="fas fa-play-circle text-cyan-400 text-2xl"></i>
+                                    <span
+                                        class="ml-2 text-white font-semibold hidden md:block">MovieStream</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="search-container"
+                            class="absolute left-1/2 -translate-x-1/2 w-0 max-w-md transition-all duration-300 ease-in-out overflow-hidden bg-cyan-900/95 backdrop-blur-md rounded-full shadow-lg z-10">
+                            <div
+                                class="flex items-center h-14 sm:h-16 px-3 sm:px-6 whitespace-nowrap">
+                                <input type="text"
+                                    placeholder="Search movies..."
+                                    class="w-full bg-transparent text-white focus:outline-none border-0 opacity-0 transition-opacity duration-300"
+                                    id="search-input">
+                                <div class="flex items-center space-x-2 ml-2">
+                                    <button id="search-close"
+                                        class="text-white hover:text-cyan-300 transition-colors duration-300">
+                                        <i class="fas fa-times text-lg"></i>
+                                    </button>
+                                    <button
+                                        class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                                        <i class="fas fa-search text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:block">
+                            <div
+                                class="ml-4 lg:ml-10 flex items-center space-x-4 lg:space-x-8">
+                                <a href="#"
+                                    class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
+                                    Home
+                                    <span
+                                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                                <a href="#"
+                                    class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
+                                    Series
+                                    <span
+                                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                                <a href="#"
+                                    class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
+                                    Animation
+                                    <span
+                                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                                <a href="#"
+                                    class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
+                                    About Us
+                                    <span
+                                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                                <a href="#"
+                                    class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
+                                    Contact
+                                    <span
+                                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3 sm:space-x-6">
+                            <button id="search-button"
+                                class="text-white hover:text-cyan-300 transition-colors duration-300">
+                                <i class="fas fa-search text-lg"></i>
+                            </button>
+                            <button
+                                class="text-white hover:text-cyan-300 transition-colors duration-300 relative">
+                                <i class="fas fa-bell text-lg"></i>
+                                <span
+                                    class="absolute -top-1 -right-1 bg-red-500 rounded-full w-2 h-2"></span>
+                            </button>
+                            <button
+                                class="text-white hover:text-cyan-300 transition-colors duration-300">
+                                <i class="fas fa-user-circle text-lg"></i>
+                            </button>
+                            <button
+                                class="text-white hover:text-cyan-300 transition-colors duration-300">
+                                <i class="fas fa-sun text-lg"></i>
+                            </button>
+                            <button type="button"
+                                class="md:hidden text-white hover:text-cyan-300"
+                                id="mobile-menu-button">
+                                <i class="fas fa-bars text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden md:hidden bg-cyan-900/95 backdrop-blur-md rounded-2xl fixed left-0 right-0 top-20 mx-2 transition-all duration-300 shadow-lg"
+                    id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="#"
+                            class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
+                            Home
+                            <span
+                                class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
+                            Series
+                            <span
+                                class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
+                            Animation
+                            <span
+                                class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
+                            About Us
+                            <span
+                                class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
+                            Contact
+                            <span
+                                class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <h1
+                class="absolute bottom-[340px] left-6 sm:left-[100px] text-white text-xl sm:text-2xl">Enjoy
+                the magic of storytelling with us.</h1>
+            <button
+                class="bg-[#2c7bbc] rounded-xl px-6 sm:px-9 py-3 absolute bottom-[220px] left-6 sm:left-[100px] hover:bg-[#228EE5] text-white">About
+                Animation</button>
+        </div>
+
+        <div class="pt-20 px-4 text-white mx-auto max-w-7xl">
+            <h1 class="text-4xl font-bold text-center text-[#E5228D]">Popular
+                2025</h1>
+            <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-8 mb-8">
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/fish.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                   <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Sing</p>
+                        <p class="text-white">Comedy/Musical</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/fox.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Bad Guys</p>
+                        <p class="text-white">Crime/Comedy</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/fox2.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Zootopia</p>
+                        <p class="text-white">Comedy/Adventure</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/gig.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Secret Life Of Pets</p>
+                        <p class="text-white">Comedy/Musical</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/panda.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Kung Fu Panda</p>
+                        <p class="text-white">Adventure/Comedy</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="../asset/pig.png" alt="Fish"
+                        class="w-full h-[296px] object-cover transform transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-3">
+                        <p class="text-white">Sing</p>
+                        <p class="text-white">Comedy/Musical</p>
+                        <p class="text-white">🌟🌟🌟🌟</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div class=" w-full">
+    <div class="flex flex-col md:flex-row items-center justify-between w-full p-4 ">
+        <div class="w-full md:w-[600px] ml-5  p-6 rounded-lg shadow-lg">
+            <p class="text-white text-[30px] leading-relaxed">
+                Making a kids' profile allows you to create a safe space for your child to watch by choosing the age of your child. It means that they can see content suitable for their age and not have access to other movies and series.
+            </p>
+            <button class="mt-12 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                Create a kids' profile
+            </button>
+        </div>
+        <div class="mt-8 md:mt-0 md:ml-8">
+            <img src="../asset/greentroll.png" alt="Shrek" class="w-[500px] h-[520px] object-cover rounded-lg shadow-lg">
+        </div>
+    </div>
+    <!-- slider -->
+     <div>
+        <div class="relative w-full h-[400px] overflow-hidden bg-[#030A1B]">
+    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="min-w-full h-[400px] flex items-center justify-center relative">
+            <img src="../asset/elemental-bg.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-70">
+            <div class="relative z-10 flex items-center max-w-6xl mx-auto px-4">
+                <div class="w-1/4">
+                    <img src="../asset/elemental-poster.png" alt="Elemental Poster" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-3/4 pl-6 text-white">
+                    <h2 class="text-4xl font-bold uppercase">Elemental</h2>
+                    <p class="text-lg mt-2">Romance/Fantasy</p>
+                    <p class="text-lg">1h 44m • 2023 • USA</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-400">★ ★ ★ ★ ★</span>
+                    </div>
+                    <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors flex items-center">
+                        <i class="fas fa-play mr-2"></i> Watch Movie
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 (Placeholder) -->
+        <div class="min-w-full h-[200px] flex items-center justify-center relative">
+            <img src="../asset/fox.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-70">
+            <div class="relative z-10 flex items-center max-w-6xl mx-auto px-4">
+                <div class="w-1/4">
+                    <img src="../asset/fox2.png" alt="Placeholder Poster" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-3/4 pl-6 text-white">
+                    <h2 class="text-4xl font-bold uppercase">Placeholder Movie</h2>
+                    <p class="text-lg mt-2">Action/Adventure</p>
+                    <p class="text-lg">2h 10m • 2024 • USA</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-400">★ ★ ★ ★ ☆</span>
+                    </div>
+                    <button class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors flex items-center">
+                        <i class="fas fa-play mr-2"></i> Watch Movie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+     </div>
+</div>
+
+        <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function(event) {
+            event.stopPropagation();
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.getElementById('search-button').addEventListener('click', function(event) {
+            event.stopPropagation();
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+            searchContainer.style.width = window.innerWidth < 640 ? '80%' : '60%';
+            setTimeout(() => {
+                searchInput.classList.remove('opacity-0');
+                searchInput.focus();
+            }, 150);
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('search-close').addEventListener('click', function() {
+            closeSearch();
+        });
+
+        document.addEventListener('click', function(event) {
+            const searchContainer = document.getElementById('search-container');
+            const searchButton = document.getElementById('search-button');
+            if (!searchContainer.contains(event.target) && !searchButton.contains(event.target) && searchContainer.style.width !== '0px' && searchContainer.style.width !== '') {
+                closeSearch();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        function closeSearch() {
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+            searchInput.classList.add('opacity-0');
+            setTimeout(() => {
+                searchContainer.style.width = '0';
+                searchInput.value = '';
+            }, 100);
+        }
+
+        document.addEventListener('click', function(event) {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                alert('Searching for: ' + this.value);
+                closeSearch();
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            const searchContainer = document.getElementById('search-container');
+            if (searchContainer.style.width !== '0px' && searchContainer.style.width !== '') {
+                searchContainer.style.width = window.innerWidth < 640 ? '80%' : '60%';
+            }
+        });
+
+        AOS.init();
+    </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/slider.js"></script>
+    </body>
+</html>
