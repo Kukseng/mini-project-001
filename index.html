@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Stream - Watch Movies</title>
+
+    <meta
+      name="description"
+      content="Stream the latest movies and TV shows in HD. Discover action, thriller, drama, and more. No ads, just entertainment. Watch now on CinemaFlix!"
+    />
+    <meta
+      name="keywords"
+      content="movies, TV shows, streaming, watch online, action, thriller, drama, HD movies, CinemaFlix"
+    />
+    <meta name="author" content="Movie Stream Team" />
+
+    <!-- Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Movie Stream - Watch Movies & TV Shows Online"
+    />
+    <meta
+      property="og:description"
+      content="Enjoy unlimited streaming of blockbuster movies and binge-worthy TV shows. Only on CinemaFlix."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg"
+    />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:site_name" content="Watch Movies" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Watch Movies - Watch Movies & TV Shows Online"
+    />
+    <meta
+      name="twitter:description"
+      content="Watch movies and TV shows without limits. Stream now with CinemaFlix."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg"
+    />
+    <meta name="twitter:site" content="@Watch Movies" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/asset/logo.png" type="image/x-icon" />
+
+    <!-- Styles & Scripts -->
     <link href="./src/output.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="/js/index.js" type="module"></script>
     <script src="/js/footer.js" type="module"></script>
     <script src="/js/index.js" type="module"></script>
 
@@ -16,17 +67,57 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="bg-black">
+    <header class="mt-4">
+      <section id="navbar"></section>
+    </header>
     <main>
-      <nav id="navbar"></nav>
-       <div class="relative min-h-screen bg-cover " style="background-image: url('https://thefutureoftheforce.com/wp-content/uploads/2024/04/The-Witcher-Header.jpg')">
-        <div class="gradient-bg absolute inset-0"></div>
-        <div class="absolute bottom-32 left-6 sm:left-16 max-w-2xl" data-aos="fade-up">
-            <h1 class="text-3xl sm:text-5xl text-white font-bold leading-tight">Discover the Magic of Wars</h1>
-            <p class="mt-4 text-lg sm:text-xl text-gray-300">Join us on a journey through vibrant worlds and unforgettable characters.</p>
-            <button class="mt-6 bg-[#E5228D] rounded-full px-8 py-3 font-semibold hover:bg-[#C11B6F] transition">Explore Movie</button>
+      <!-- Hero Section Banner -->
+      <section
+        class="carousel relative w-full h-screen mb-10"
+      >
+        <div class="list w-full h-full">
+          <div
+            class="item w-full h-full bg-cover bg-center rounded-none shadow-lg transition-all duration-1000"
+            style="background-image: url('/asset/homepageImage/img1.png')"
+          >
+            <div
+              class="content absolute top-1/2 2xl:left-24 xl:left-20 lg:left-18 md:left-14 sm:left-10 left-8 -translate-y-1/2 2xl:w-[600px] xl:w-[550px] lg:w-[500px] md:w-[400px] sm:w-[350px] w-[300px] text-left text-white block"
+            >
+              <h2
+                class="title 2xl:text-[70px] xl:text-[70px] lg:text-[60px] md:text-[40px] sm:text-[30px] text-[30px] uppercase font-bold text-brandBlue leading-none animate-fadeInUp"
+              >
+                The Witcher
+              </h2>
+              <h3
+                class="name 2xl:text-[30px] xl:text-[30px] lg:text-[28px] md:text-[20px] sm:text-[18px] text-[18px] mt-2 capitalize font-bold text-white shadow-md animate-fadeInUp"
+              >
+                Action/TV Series
+              </h3>
+              <p
+                class="des mt-4 mb-5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[14px] ml-1 animate-fadeInUp"
+              >
+                Geralt of Rivia, a mutated monster-hunter for hire, journeys
+                toward his destiny in a turbulent world where people often prove
+                more wicked than beast
+              </p>
+              <div class="btn ml-1 animate-fadeInUp">
+                <button
+                  class="2xl:px-6 xl:px-6 lg:px-5 md:px-4 sm:px-5 px-3 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-1.5 py-1.5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[12px] text-white bg-[#2B7FFF] border-2 border-brandBlue rounded-full hover:bg-brandBlueHover transition-transform hover:-translate-y-2 mx-2"
+                >
+                  <i class="fa-solid fa-play"></i> Watch Movie
+                </button>
+                <button
+                  class="2xl:px-6 xl:px-6 lg:px-5 md:px-4 sm:px-5 px-3 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-1.5 py-1.5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[12px] text-brandBlue border-2 border-white rounded-full hover:text-white hover:border-brandBlue transition-transform hover:-translate-y-2"
+                >
+                  More Info <span>&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
       <!-- Trend Section -->
       <section class="bg-black text-white mb-8 mx-[40px]">
         <div class="flex justify-between items-center mb-4">
