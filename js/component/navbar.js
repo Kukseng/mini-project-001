@@ -27,7 +27,7 @@ export const navbarComponent = () => {
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-4 lg:ml-10 flex items-center space-x-4 lg:space-x-8">
-                        <a href="/home" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Home<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+                        <a href="/index.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Home<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/series" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Series<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/pages/animation.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Animation<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/aboutUs.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">About Us<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
