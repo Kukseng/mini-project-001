@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@layer utilities {
+    @keyframes text-color-change {
+
+        0%,
+        100% {
+            color: #ffffff;
+        }
+
+        50% {
+            color: #3b82f6;
+        }
+    }
+
+    .animate-text-color-change {
+        animation: text-color-change 3s ease-in-out infinite;
+    }
+}
