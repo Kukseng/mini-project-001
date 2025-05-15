@@ -5,115 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeFilm - Movie Site</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/index.js" type="module"></script>
+  <script src="./js/footer.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white">
   <header>
     <div class="relative w-full">
-     <nav class="fixed w-full z-50 flex justify-center px-2 sm:px-6 lg:px-8 pt-4">
-            <div class="w-full max-w-6xl bg-cyan-900/30 backdrop-blur-sm rounded-full border border-cyan-800/40">
-                <div class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6">
-                    <!-- Logo and Brand -->
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0">
-                            <a href="#" class="flex items-center">
-                                <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
-                                <span class="ml-2 text-white font-semibold hidden md:block">SabyMer</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Modified Search Input - removed borders that cause vertical lines -->
-                    <div id="search-container" class="absolute left-1/2 -translate-x-1/2 w-0 max-w-md transition-all duration-300 ease-in-out overflow-hidden bg-cyan-900/90 backdrop-blur-md rounded-full shadow-lg z-10">
-                        <div class="flex items-center h-14 sm:h-16 px-3 sm:px-6 whitespace-nowrap">
-                            <input type="text" placeholder="Search movies..." class="w-full bg-transparent text-white focus:outline-none focus:ring-0 border-0 opacity-0 transition-opacity duration-300" id="search-input">
-                            <div class="flex items-center space-x-2 ml-2">
-                                <button id="search-close" class="text-white hover:text-cyan-300 transition-colors duration-300">
-                                    <i class="fas fa-times text-lg"></i>
-                                </button>
-                                <button class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-                                    <i class="fas fa-search text-lg"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Navigation Links - Desktop -->
-                    <div class="hidden md:block">
-                        <div class="ml-4 lg:ml-10 flex items-center space-x-4 lg:space-x-8">
-                            <a href="#" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
-                                Home
-                                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="#" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
-                                Series
-                                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="#" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
-                                Animation
-                                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="#" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
-                                About Us
-                                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="#" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">
-                                Contact
-                                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Icons -->
-                    <div class="flex items-center space-x-3 sm:space-x-6">
-                        <button id="search-button" class="text-white hover:text-cyan-300 transition-colors duration-300">
-                            <i class="fas fa-search text-lg"></i>
-                        </button>
-                        <button class="text-white hover:text-cyan-300 transition-colors duration-300 relative">
-                            <i class="fas fa-bell text-lg"></i>
-                            <span class="absolute -top-1 -right-1 bg-red-500 rounded-full w-2 h-2"></span>
-                        </button>
-                        <button class="text-white hover:text-cyan-300 transition-colors duration-300">
-                            <i class="fas fa-user-circle text-lg"></i>
-                        </button>
-                        <button class="text-white hover:text-cyan-300 transition-colors duration-300">
-                            <i class="fas fa-sun text-lg"></i>
-                        </button>
-                        
-                        <!-- Mobile menu button -->
-                        <button type="button" class="md:hidden text-white hover:text-cyan-300" id="mobile-menu-button">
-                            <i class="fas fa-bars text-lg"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mobile menu - positioned under navbar -->
-            <div class="hidden md:hidden bg-cyan-900/90 backdrop-blur-md rounded-2xl fixed left-0 right-0 top-20 mx-2 transition-all duration-300 shadow-lg" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
-                        Home
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
-                    <a href="#" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
-                        Series
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
-                    <a href="#" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
-                        Animation
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
-                    <a href="#" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
-                        About Us
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
-                    <a href="#" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">
-                        Contact
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
-                </div>
-            </div>
-        </nav>
+    <nav id="navbar">
+
+    </nav>
     <div class="relative w-full h-64 sm:h-96 md:h-[450px] lg:h-[550px]">
       <!-- Replace this URL with your own image -->
       <img src="image/Aboutus.jpg" alt="Movie Scene" class="w-full h-full object-cover">
@@ -529,58 +430,7 @@
 </section>
 
 <!-- Footer  -->
-<footer class="bg-gradient-to-r from-blue-900 to-bg-[#050a1c] text-white py-8">
-  <div class="container mx-auto px-4">
-    <!-- Logo and Navigation -->
-    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-      <!-- Logo with spin animation on hover -->
-      <div class="mb-6 md:mb-0">
-        <a href="#" class="flex items-center group">
-          <div class="transform transition-transform duration-500 group-hover:rotate-[360deg]">
-            <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
-          </div>
-          <span class="ml-2 text-xl font-bold text-blue-400">SabyMer</span>
-        </a>
-      </div>
-      
-      <!-- Navigation Links -->
-      <nav class="flex space-x-8">
-        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Home</a>
-        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">About</a>
-        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Service</a>
-        <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-sm md:text-base">Contact Us</a>
-      </nav>
-    </div>
-    
-    <!-- Social Media Icons with hover effects -->
-    <div class="flex justify-center space-x-6 my-8">
-      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-800 transition-all duration-300">
-        <i class="fab fa-facebook-f text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
-      </a>
-      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-pink-600 transition-all duration-300">
-        <i class="fab fa-instagram text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
-      </a>
-      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-700 transition-all duration-300">
-        <i class="fab fa-linkedin-in text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
-      </a>
-      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-red-600 transition-all duration-300">
-        <i class="fab fa-youtube text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
-      </a>
-      <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group hover:bg-blue-500 transition-all duration-300">
-        <i class="fab fa-telegram-plane text-gray-300 group-hover:text-white group-hover:scale-125 transition-all duration-300"></i>
-      </a>
-    </div>
-    
-    <!-- Divider -->
-    <div class="border-t border-gray-700 my-6"></div>
-    
-    <!-- Copyright -->
-    <div class="text-center text-gray-400 text-sm">
-      <p>Copyright © 2025 SabyMer. All rights reserved.</p>
-      <p class="mt-2">The home for movie lovers</p>
-    </div>
-  </div>
-</footer>
+<footer id="footer"></footer>
 <script>
         // Toggle mobile menu
         document.getElementById('mobile-menu-button').addEventListener('click', function(event) {
