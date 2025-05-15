@@ -6,7 +6,7 @@ export const navbarComponent = () => {
             <div class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="#" class="flex items-center">
+                        <a href="/index.html" class="flex items-center">
                             <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
                             <span class="ml-2 text-white font-semibold hidden md:block">SabyMer</span>
                         </a>
