@@ -1,6 +1,6 @@
 // component/navbar.js
 export const navbarComponent = () => {
-    return `
+  return `
     <nav class="fixed w-full z-50 flex justify-center px-2 sm:px-6 lg:px-8 pt-4">
         <div class="w-full max-w-6xl bg-cyan-900/40 backdrop-blur-md rounded-full border border-cyan-800/50">
             <div class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6">
@@ -42,9 +42,11 @@ export const navbarComponent = () => {
                         <i class="fas fa-bell text-lg"></i>
                         <span class="absolute -top-1 -right-1 bg-red-500 rounded-full w-2 h-2"></span>
                     </button>
-                    <button class="text-white hover:text-cyan-300 transition-colors duration-300" aria-label="User profile">
-                        <i class="fas fa-user-circle text-lg"></i>
-                    </button>
+
+                   <a href="/signin.html" class="text-white hover:text-cyan-300 transition-colors duration-300" aria-label="User profile">
+  <i class="fas fa-user-circle text-lg"></i>
+</a>
+
                     <button class="text-white hover:text-cyan-300 transition-colors duration-300" aria-label="Toggle theme">
                         <i class="fas fa-sun text-lg"></i>
                     </button>
