@@ -8,7 +8,7 @@ export const navbarComponent = () => {
                     <div class="flex-shrink-0">
                         <a href="#" class="flex items-center">
                             <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
-                            <span class="ml-2 text-white font-semibold hidden md:block">MovieStream</span>
+                            <span class="ml-2 text-white font-semibold hidden md:block">SabyMer</span>
                         </a>
                     </div>
                 </div>
