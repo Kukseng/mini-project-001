@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Stream - Watch Movies</title>
+
+    <meta
+      name="description"
+      content="Stream the latest movies and TV shows in HD. Discover action, thriller, drama, and more. No ads, just entertainment. Watch now on CinemaFlix!"
+    />
+    <meta
+      name="keywords"
+      content="movies, TV shows, streaming, watch online, action, thriller, drama, HD movies, CinemaFlix"
+    />
+    <meta name="author" content="Movie Stream Team" />
+
+    <!-- Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Movie Stream - Watch Movies & TV Shows Online"
+    />
+    <meta
+      property="og:description"
+      content="Enjoy unlimited streaming of blockbuster movies and binge-worthy TV shows. Only on CinemaFlix."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg"
+    />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:site_name" content="Watch Movies" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Watch Movies - Watch Movies & TV Shows Online"
+    />
+    <meta
+      name="twitter:description"
+      content="Watch movies and TV shows without limits. Stream now with CinemaFlix."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg"
+    />
+    <meta name="twitter:site" content="@Watch Movies" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/asset/logo.png" type="image/x-icon" />
+
+    <!-- Styles & Scripts -->
     <link href="./src/output.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="/js/index.js" type="module"></script>
     <script src="/js/footer.js" type="module"></script>
     <link
       rel="stylesheet"
@@ -14,10 +65,60 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="bg-black">
+    <header class="mt-4">
+      <section id="navbar"></section>
+    </header>
     <main>
+      <!-- Hero Section Banner -->
+      <section
+        class="carousel relative w-full h-screen mb-10"
+      >
+        <div class="list w-full h-full">
+          <div
+            class="item w-full h-full bg-cover bg-center rounded-none shadow-lg transition-all duration-1000"
+            style="background-image: url('/asset/homepageImage/img1.png')"
+          >
+            <div
+              class="content absolute top-1/2 2xl:left-24 xl:left-20 lg:left-18 md:left-14 sm:left-10 left-8 -translate-y-1/2 2xl:w-[600px] xl:w-[550px] lg:w-[500px] md:w-[400px] sm:w-[350px] w-[300px] text-left text-white block"
+            >
+              <h2
+                class="title 2xl:text-[70px] xl:text-[70px] lg:text-[60px] md:text-[40px] sm:text-[30px] text-[30px] uppercase font-bold text-brandBlue leading-none animate-fadeInUp"
+              >
+                The Witcher
+              </h2>
+              <h3
+                class="name 2xl:text-[30px] xl:text-[30px] lg:text-[28px] md:text-[20px] sm:text-[18px] text-[18px] mt-2 capitalize font-bold text-white shadow-md animate-fadeInUp"
+              >
+                Action/TV Series
+              </h3>
+              <p
+                class="des mt-4 mb-5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[14px] ml-1 animate-fadeInUp"
+              >
+                Geralt of Rivia, a mutated monster-hunter for hire, journeys
+                toward his destiny in a turbulent world where people often prove
+                more wicked than beast
+              </p>
+              <div class="btn ml-1 animate-fadeInUp">
+                <button
+                  class="2xl:px-6 xl:px-6 lg:px-5 md:px-4 sm:px-5 px-3 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-1.5 py-1.5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[12px] text-white bg-[#2B7FFF] border-2 border-brandBlue rounded-full hover:bg-brandBlueHover transition-transform hover:-translate-y-2 mx-2"
+                >
+                  <i class="fa-solid fa-play"></i> Watch Movie
+                </button>
+                <button
+                  class="2xl:px-6 xl:px-6 lg:px-5 md:px-4 sm:px-5 px-3 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-1.5 py-1.5 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[16px] text-[12px] text-brandBlue border-2 border-white rounded-full hover:text-white hover:border-brandBlue transition-transform hover:-translate-y-2"
+                >
+                  More Info <span>&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Trend Section -->
-      <section class="bg-black text-white mb-8 mx-[40px]">
+      <section class="bg-black text-white mb-10 mx-[40px]">
         <div class="flex justify-between items-center mb-4">
           <h2
             class="2xl:text-[48px] xl:text-[48px] lg:text-[45px] md:text-[32px] sm:text-[28px] text-[22px] font-bold"
@@ -40,32 +141,7 @@
         >
           <div class="flex gap-6 min-w-max" style="overflow: hidden">
             <!-- Poster Cards -->
-            <div
-              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
-            >
-              <div class="rounded-xl overflow-hidden">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/8/85/Study_Group_%28TV_series%29_poster.png"
-                  alt="18 Again"
-                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
 
-              <!-- Hover Overlay -->
-              <div
-                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
-              >
-                <h2 class="text-[24px] font-bold">Study Group</h2>
-                <p class="text-[16px] mb-2">TV Series</p>
-                <div class="flex items-center">
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                </div>
-              </div>
-            </div>
             <div
               class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
             >
@@ -109,6 +185,85 @@
               >
                 <h2 class="text-[24px] font-bold">Mission: imposible</h2>
                 <p class="text-[16px] mb-2">Action/Thriller</p>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: gray"></i>
+                </div>
+              </div>
+            </div>
+                        <div
+              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
+            >
+              <div class="rounded-xl overflow-hidden">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Oppenheimer_%28film%29.jpg/250px-Oppenheimer_%28film%29.jpg"
+                  alt="18 Again"
+                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
+              >
+                <h2 class="text-[24px] font-bold">Oppenheimer</h2>
+                <p class="text-[16px] mb-2">Thriller/Historical drama</p>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: gray"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
+            >
+              <div class="rounded-xl overflow-hidden">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D4D34AQGN2-NAedrBJQ/ugc-proxy-shrink_800/ugc-proxy-shrink_800/0/1700842526056?e=2147483647&v=beta&t=sKz7JTvmow1fM8TL2ThoXuQ3zDHLJsm9cSMb7WTEMPQ"
+                  alt="18 Again"
+                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
+              >
+                <h2 class="text-[24px] font-bold">My Demon</h2>
+                <p class="text-[16px] mb-2">Romance</p>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: gray"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
+            >
+              <div class="rounded-xl overflow-hidden">
+                <img
+                  src="https://i.redd.it/z4nik5ytujk91.jpg"
+                  alt="18 Again"
+                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
+              >
+                <h2 class="text-[24px] font-bold">Don't Worry Darling</h2>
+                <p class="text-[16px] mb-2">Thriller/Mystery</p>
                 <div class="flex items-center">
                   <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
                   <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
@@ -301,13 +456,39 @@
                 </div>
               </div>
             </div>
+                        <div
+              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
+            >
+              <div class="rounded-xl overflow-hidden">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/8/85/Study_Group_%28TV_series%29_poster.png"
+                  alt="18 Again"
+                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
+              >
+                <h2 class="text-[24px] font-bold">Study Group</h2>
+                <p class="text-[16px] mb-2">TV Series</p>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Award Section -->
       <section
-        class="w-full bg-[#DAA521] 2xl:py-18 xl:py-12 lg:py-10 md:py-10 sm:py-10 py-10 relative overflow-hidden flex justify-center"
+        class="w-full bg-[#DAA521] 2xl:py-18 xl:py-12 lg:py-10 md:py-10 sm:py-10 py-10 relative mb-10 overflow-hidden flex justify-center"
       >
         <div
           class="max-w-7xl w-full flex items-center justify-between px-6 lg:px-12"
@@ -327,7 +508,7 @@
       </section>
 
       <!-- Series Section -->
-      <section class="bg-black text-white mb-8 mx-[40px]">
+      <section class="bg-black text-white mb-10 mx-[40px]">
         <div class="flex justify-between items-center mb-4">
           <h2
             class="2xl:text-[48px] xl:text-[48px] lg:text-[45px] md:text-[32px] sm:text-[28px] text-[22px] font-bold"
@@ -350,32 +531,7 @@
         >
           <div class="flex gap-6 min-w-max" style="overflow: hidden">
             <!-- Poster Cards -->
-            <div
-              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
-            >
-              <div class="rounded-xl overflow-hidden">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR8qxZuGG_hnIP6Fbeyw0tTTI24V3yUt66u0P8TSNSTYVMymYrWnpcqp2r_zDqqDpA8sg&usqp=CAU"
-                  alt="18 Again"
-                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
 
-              <!-- Hover Overlay -->
-              <div
-                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
-              >
-                <h2 class="text-[24px] font-bold">Harry Potter</h2>
-                <p class="text-[16px] mb-2">Novel Series</p>
-                <div class="flex items-center">
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
-                  <i class="fa-solid fa-star mx-1" style="color: gray"></i>
-                </div>
-              </div>
-            </div>
             <div
               class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
             >
@@ -611,13 +767,39 @@
                 </div>
               </div>
             </div>
+                        <div
+              class="relative w-60 flex-shrink-0 shadow-lg group cursor-pointer"
+            >
+              <div class="rounded-xl overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR8qxZuGG_hnIP6Fbeyw0tTTI24V3yUt66u0P8TSNSTYVMymYrWnpcqp2r_zDqqDpA8sg&usqp=CAU"
+                  alt="18 Again"
+                  class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 rounded-xl bg-gradient-to-t from-black via-black/60 to-black/0 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4"
+              >
+                <h2 class="text-[24px] font-bold">Harry Potter</h2>
+                <p class="text-[16px] mb-2">Novel Series</p>
+                <div class="flex items-center">
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: #ffd43b"></i>
+                  <i class="fa-solid fa-star mx-1" style="color: gray"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Child Section Cartton -->
       <section
-        class="bg-blue-500 text-white 2xl:py-16 xl:py-14 lg:py-12 md:py-10 sm:py-8 py-12 px-4 md:px-16 text-center my-20"
+        class="bg-blue-500 text-white 2xl:py-16 mb-10 xl:py-14 lg:py-12 md:py-10 sm:py-8 py-12 px-4 md:px-16 text-center my-20"
       >
         <h2
           class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold mb-4"
@@ -661,7 +843,7 @@
       </section>
 
       <!-- All Movie Section -->
-      <section class="bg-black text-white mb-8 mx-[40px]">
+      <section class="bg-black text-white mb-10 mx-[40px]">
         <div class="flex justify-between items-center mb-4">
           <h2
             class="2xl:text-[48px] xl:text-[48px] lg:text-[45px] md:text-[32px] sm:text-[28px] text-[22px] font-bold"
@@ -673,8 +855,9 @@
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-14"
         >
           <!-- Poster Card -->
-          <div data-aos="fade-up"
-     data-aos-duration="1000"
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -701,8 +884,9 @@
               </div>
             </div>
           </div>
-          <div data-aos="fade-up"
-     data-aos-duration="1000"
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -729,8 +913,9 @@
               </div>
             </div>
           </div>
-          <div  data-aos="fade-up"
-     data-aos-duration="1000"
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -758,8 +943,9 @@
             </div>
           </div>
 
-          <div  data-aos="fade-up"
-     data-aos-duration="1000"
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -787,8 +973,9 @@
             </div>
           </div>
 
-          <div  data-aos="fade-up"
-     data-aos-duration="1000"
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -815,7 +1002,8 @@
               </div>
             </div>
           </div>
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -842,7 +1030,8 @@
               </div>
             </div>
           </div>
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -870,7 +1059,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -898,7 +1088,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -926,7 +1117,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -953,7 +1145,8 @@
               </div>
             </div>
           </div>
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -980,7 +1173,8 @@
               </div>
             </div>
           </div>
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -1008,7 +1202,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -1036,7 +1231,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -1064,7 +1260,8 @@
             </div>
           </div>
 
-          <div
+          <div   data-aos="fade-up"
+            data-aos-duration="1000"
             class="relative w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer"
           >
             <!-- Movie Poster -->
@@ -1103,7 +1300,7 @@
       </section>
 
       <!-- Charactor Section -->
-      <section class="bg-black text-white py-6 mb-8 mx-[40px]">
+      <section class="bg-black text-white py-6 mb-10 mx-[40px]">
         <!-- Header Row -->
         <div class="flex justify-between items-center mb-4 px-4">
           <h2
@@ -1233,8 +1430,11 @@
         </div>
       </section>
     </main>
-    <section id="footer"></section>
+    <footer>
+      <section id="footer"></section>
+    </footer>
 
+    <script src="/js/homeslide.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
